@@ -1,3 +1,6 @@
+# will contain the main logic for the app
+
+#* original comments below
 # Import your Game class
 
 # Create your Dunder Main statement.

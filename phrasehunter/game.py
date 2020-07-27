@@ -1,3 +1,7 @@
+# will contain the Game class and manage the game functionality
+# will contain methods to show the game, handle interactions, and check when the game is over
+
+#* original comments below
 # Create your Game class logic in here.
 
 # game class will manage things like starting the game, handling interactions, getting random phrase, checking win/loss and removing lives
