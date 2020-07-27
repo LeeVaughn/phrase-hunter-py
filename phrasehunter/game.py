@@ -1,5 +1,7 @@
 # will contain the Game class and manage the game functionality
 # will contain methods to show the game, handle interactions, and check when the game is over
+class Game:
+    pass
 
 #* original comments below
 # Create your Game class logic in here.

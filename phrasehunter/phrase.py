@@ -1,4 +1,6 @@
 # will contain the Phrase class and manage individual phrases
+class Phrase:
+    pass
 
 #* original comments below
 # Create your Phrase class logic here.
