@@ -1,7 +1,11 @@
 # will contain the Game class and manage the game functionality
 # will contain methods to show the game, handle interactions, and check when the game is over
 class Game:
-    pass
+    def __init__(self):
+        self.missed = 0
+        self.phrases = []
+        self.active_phrase = None
+        self.guesses = " "
 
 #* original comments below
 # Create your Game class logic in here.
