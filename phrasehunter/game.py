@@ -1,9 +1,17 @@
+from phrasehunter.phrase import Phrase
+
 # will contain the Game class and manage the game functionality
 # will contain methods to show the game, handle interactions, and check when the game is over
 class Game:
     def __init__(self):
         self.missed = 0
-        self.phrases = []
+        self.phrases = [
+            Phrase("My precious"),
+            Phrase("All righty then"),
+            Phrase("Show me the money"),
+            Phrase("I see dead people"),
+            Phrase("That escalated quickly")
+            ]
         self.active_phrase = None
         self.guesses = " "
 
