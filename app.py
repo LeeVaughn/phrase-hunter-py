@@ -4,8 +4,13 @@
 from phrasehunter.game import Game
 from phrasehunter.phrase import Phrase
 
-newPhrase = Phrase()
-newGame = Game()
+# # tests step 2
+# newPhrase = Phrase()
+# newGame = Game()
+
+# # tests step 3
+# phrase = Phrase("Life is like a box of chocolates")
+# print(phrase.phrase)
 
 #* original comments below
 # Import your Game class
