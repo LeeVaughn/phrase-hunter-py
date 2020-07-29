@@ -12,6 +12,11 @@ from phrasehunter.phrase import Phrase
 # phrase = Phrase("Life is like a box of chocolates")
 # print(phrase.phrase)
 
+# # tests step 4
+# game = Game()
+# for phrase in game.phrases:
+#     print(phrase.phrase)
+
 #* original comments below
 # Import your Game class
 
