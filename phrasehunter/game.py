@@ -1,4 +1,5 @@
 from phrasehunter.phrase import Phrase
+import random
 
 # will contain the Game class and manage the game functionality
 # will contain methods to show the game, handle interactions, and check when the game is over
@@ -14,6 +15,9 @@ class Game:
             ]
         self.active_phrase = None
         self.guesses = " "
+
+    def get_random_phrase(self):
+        return random.choice(self.phrases)
 
 #* original comments below
 # Create your Game class logic in here.
