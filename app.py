@@ -29,6 +29,11 @@ if __name__ == '__main__':
     # print_phrase(game.get_random_phrase())
     # print_phrase(game.get_random_phrase())
 
+    # # tests step 6
+    # game = Game()
+    # print(game.active_phrase)
+    # print(game.active_phrase.phrase)
+
 
 #* original comments below
 # Import your Game class
