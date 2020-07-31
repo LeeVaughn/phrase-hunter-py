@@ -4,18 +4,19 @@
 from phrasehunter.game import Game
 from phrasehunter.phrase import Phrase
 
-# # tests step 2
-# newPhrase = Phrase()
-# newGame = Game()
+if __name__ == '__main__':
+    # # tests step 2
+    # newPhrase = Phrase()
+    # newGame = Game()
 
-# # tests step 3
-# phrase = Phrase("Life is like a box of chocolates")
-# print(phrase.phrase)
+    # # tests step 3
+    # phrase = Phrase("Life is like a box of chocolates")
+    # print(phrase.phrase)
 
-# # tests step 4
-# game = Game()
-# for phrase in game.phrases:
-#     print(phrase.phrase)
+    # tests step 4
+    game = Game()
+    for phrase in game.phrases:
+        print(phrase.phrase)
 
 #* original comments below
 # Import your Game class
