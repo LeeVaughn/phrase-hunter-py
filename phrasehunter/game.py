@@ -6,15 +6,18 @@ import random
 class Game:
     def __init__(self):
         self.missed = 0
-        self.phrases = [
+        self.phrases = self.create_phrases()
+        self.active_phrase = self.get_random_phrase()
+        self.guesses = " "
+    
+    def create_phrases(self):
+        return [
             Phrase("My precious"),
             Phrase("All righty then"),
             Phrase("Show me the money"),
             Phrase("I see dead people"),
             Phrase("That escalated quickly")
             ]
-        self.active_phrase = None
-        self.guesses = " "
 
     def get_random_phrase(self):
         return random.choice(self.phrases)
