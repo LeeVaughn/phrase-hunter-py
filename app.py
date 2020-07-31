@@ -13,10 +13,22 @@ if __name__ == '__main__':
     # phrase = Phrase("Life is like a box of chocolates")
     # print(phrase.phrase)
 
-    # tests step 4
-    game = Game()
-    for phrase in game.phrases:
-        print(phrase.phrase)
+    # # tests step 4
+    # game = Game()
+    # for phrase in game.phrases:
+    #     print(phrase.phrase)
+
+    # # tests step 5
+    # def print_phrase(phrase_object):
+    #     print(f"the phrase is: {phrase_object.phrase}")
+
+    # game = Game()
+    # print_phrase(game.get_random_phrase())
+    # print_phrase(game.get_random_phrase())
+    # print_phrase(game.get_random_phrase())
+    # print_phrase(game.get_random_phrase())
+    # print_phrase(game.get_random_phrase())
+
 
 #* original comments below
 # Import your Game class
