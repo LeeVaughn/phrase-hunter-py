@@ -9,6 +9,11 @@ class Game:
         self.phrases = self.create_phrases()
         self.active_phrase = self.get_random_phrase()
         self.guesses = " "
+
+    def welcome(self):
+        print("\nWelcome to Phrase Hunter!")
+        print("\nGuess all of the letters in the phrase to win.")
+        print("\nGood luck!")
     
     def create_phrases(self):
         return [
