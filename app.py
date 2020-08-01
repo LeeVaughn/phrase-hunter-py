@@ -39,6 +39,10 @@ if __name__ == '__main__':
     # print(game.active_phrase.phrase)
     # game.active_phrase.display(game.guesses)
 
+    # tests step 8
+    game = Game()
+    game.welcome()
+
 
 #* original comments below
 # Import your Game class
