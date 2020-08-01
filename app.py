@@ -33,6 +33,11 @@ if __name__ == '__main__':
     # game = Game()
     # print(game.active_phrase)
     # print(game.active_phrase.phrase)
+    
+    # # tests step 7
+    # game = Game()
+    # print(game.active_phrase.phrase)
+    # game.active_phrase.display(game.guesses)
 
 
 #* original comments below
