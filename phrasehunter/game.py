@@ -16,13 +16,26 @@ class Game:
         print(f"\nNumber of misses: {self.missed}\n")
 
         self.active_phrase.display(self.guesses)
+
+        print("\n")
     
     def welcome(self):
-        print("\n=======================================")
-        print("\n       Welcome to Phrase Hunter!")
-        print("\n   Guess all of the letters and win.")
-        print("\n              Good luck!")
-        print("\n=======================================")
+        # print("\n=======================================")
+        # print("\n       Welcome to Phrase Hunter!")
+        # print("\n   Guess all of the letters and win.")
+        # print("\n              Good luck!")
+        # print("\n=======================================")
+        print("""
+        =======================================
+
+               Welcome to Phrase Hunter!
+
+           Guess all of the letters and win.
+
+                      Good luck!
+
+        =======================================
+        """)
     
     def create_phrases(self):
         return [
