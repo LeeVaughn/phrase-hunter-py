@@ -10,6 +10,13 @@ class Game:
         self.active_phrase = self.get_random_phrase()
         self.guesses = " "
 
+    def start(self):
+        self.welcome()
+
+        print(f"\nNumber of misses: {self.missed}\n")
+
+        self.active_phrase.display(self.guesses)
+    
     def welcome(self):
         print("\n=======================================")
         print("\n       Welcome to Phrase Hunter!")
