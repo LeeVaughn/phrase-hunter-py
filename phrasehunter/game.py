@@ -11,9 +11,11 @@ class Game:
         self.guesses = " "
 
     def welcome(self):
-        print("\nWelcome to Phrase Hunter!")
-        print("\nGuess all of the letters in the phrase to win.")
-        print("\nGood luck!")
+        print("\n=======================================")
+        print("\n       Welcome to Phrase Hunter!")
+        print("\n   Guess all of the letters and win.")
+        print("\n              Good luck!")
+        print("\n=======================================")
     
     def create_phrases(self):
         return [
