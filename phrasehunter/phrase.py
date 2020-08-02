@@ -18,6 +18,15 @@ class Phrase:
             print("False")
             return False
 
+    def check_complete(self, guesses):
+        for letter in self.phrase:
+            if letter not in guesses:
+                print("False")
+                return False
+        print("True")
+        return True
+
+
 #* original comments below
 # Create your Phrase class logic here.
 
