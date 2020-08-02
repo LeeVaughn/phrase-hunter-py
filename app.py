@@ -43,10 +43,15 @@ if __name__ == '__main__':
     # game = Game()
     # game.welcome()
 
-    # # tests step 9
+    # # tests step 9 and beyond
     # game = Game()
     # print(game.active_phrase.phrase)
     # game.start()
+
+    # tests step 10 and beyond
+        # tests step 9 and beyond
+    game = Game()
+    game.start()
 
 
 #* original comments below
