@@ -14,7 +14,8 @@ class Game:
         self.welcome()
 
         while self.missed < 5 and self.active_phrase.check_complete(self.guesses) is False:
-            print(f"\nNumber of misses: {self.missed}\n")
+            print(f"\nNumber of misses: {self.missed}")
+            print(f"You have {5 - self.missed} misses remaining\n")
 
             self.active_phrase.display(self.guesses)
 
