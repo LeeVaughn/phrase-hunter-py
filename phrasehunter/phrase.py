@@ -10,6 +10,14 @@ class Phrase:
             else:
                 print("_ ", end = " ")
 
+    def check_guess(self, guess):
+        if guess.lower() in self.phrase:
+            print("True")
+            return True
+        else:
+            print("False")
+            return False
+
 #* original comments below
 # Create your Phrase class logic here.
 
