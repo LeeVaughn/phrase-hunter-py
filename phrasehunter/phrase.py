@@ -12,18 +12,16 @@ class Phrase:
 
     def check_guess(self, guess):
         if guess.lower() in self.phrase:
-            print("True")
+            print("Success!")
             return True
         else:
-            print("False")
+            print("Sorry, that letter is not in the phrase.")
             return False
 
     def check_complete(self, guesses):
         for letter in self.phrase:
             if letter not in guesses:
-                print("False")
                 return False
-        print("True")
         return True
 
 
