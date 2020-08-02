@@ -21,6 +21,8 @@ class Game:
 
         user_guess = self.get_guess()
         self.guesses = self.guesses + user_guess
+
+        self.active_phrase.check_guess(user_guess)
     
     def welcome(self):
         # print("\n=======================================")
