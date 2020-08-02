@@ -18,6 +18,9 @@ class Game:
         self.active_phrase.display(self.guesses)
 
         print("\n")
+
+        user_guess = self.get_guess()
+        self.guesses = self.guesses + user_guess
     
     def welcome(self):
         # print("\n=======================================")
@@ -48,6 +51,14 @@ class Game:
 
     def get_random_phrase(self):
         return random.choice(self.phrases)
+
+    def get_guess(self):
+        try:
+            current_guess = str(input("Guess a letter: "))
+        except ValueError:
+            print("Sorry! That guess is not a valid letter. Please try again...\n")
+
+        return current_guess
 
 #* original comments below
 # Create your Game class logic in here.
