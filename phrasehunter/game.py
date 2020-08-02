@@ -13,16 +13,19 @@ class Game:
     def start(self):
         self.welcome()
 
-        print(f"\nNumber of misses: {self.missed}\n")
+        while self.missed < 5 and self.active_phrase.check_complete(self.guesses) is False:
+            print(f"\nNumber of misses: {self.missed}\n")
 
-        self.active_phrase.display(self.guesses)
+            self.active_phrase.display(self.guesses)
 
-        print("\n")
+            print("\n")
 
-        user_guess = self.get_guess()
-        self.guesses = self.guesses + user_guess
+            user_guess = self.get_guess()
+            self.guesses = self.guesses + user_guess
 
-        self.active_phrase.check_guess(user_guess)
+            if not self.active_phrase.check_guess(user_guess):
+                self.missed += 1
+
     
     def welcome(self):
         # print("\n=======================================")
