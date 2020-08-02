@@ -26,6 +26,8 @@ class Game:
             if not self.active_phrase.check_guess(user_guess):
                 self.missed += 1
 
+        self.game_over()
+
     
     def welcome(self):
         # print("\n=======================================")
@@ -64,6 +66,12 @@ class Game:
             print("Sorry! That guess is not a valid letter. Please try again...\n")
 
         return current_guess
+
+    def game_over(self):
+        if self.missed is 5:
+            print("Sorry, you have run out of guesses. Better luck next time!")
+        else:
+            print("Congratulations! You have guessed all of the letters in the phrase!")
 
 #* original comments below
 # Create your Game class logic in here.
