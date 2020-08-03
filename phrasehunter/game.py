@@ -4,7 +4,7 @@ import random
 
 class Game:
     """
-    initializes the instance attributes and contains methods for gameplay
+    initializes instance attributes and contains methods for gameplay
 
     initializes the instance attributes
     start method calls welcome method and continues gameplay until phrase is guessed or player is out of tries
@@ -32,10 +32,18 @@ class Game:
             print("\n")
 
             user_guess = self.get_guess()
-            self.guesses = self.guesses + user_guess
 
-            if not self.active_phrase.check_guess(user_guess):
-                self.missed += 1
+            try:
+                if len(user_guess) is 1 and user_guess.isalpha():
+                    self.guesses = self.guesses + user_guess
+
+                    if not self.active_phrase.check_guess(user_guess):
+                        self.missed += 1
+                else:
+                    raise ValueError()
+
+            except ValueError:
+                print("Whoops! That guess is not a valid letter. Please try again...\n")
 
         self.game_over()
 
@@ -65,10 +73,7 @@ class Game:
         return random.choice(self.phrases)
 
     def get_guess(self):
-        try:
-            current_guess = str(input("Guess a letter: "))
-        except ValueError:
-            print("Sorry! That guess is not a valid letter. Please try again...\n")
+        current_guess = str(input("Guess a letter: "))
 
         return current_guess
 
