@@ -46,6 +46,7 @@ class Game:
                 print("Whoops! That guess is not a valid letter. Please try again...\n")
 
         self.game_over()
+        self.play_again()
 
     def welcome(self):
         print("""
@@ -79,6 +80,26 @@ class Game:
 
     def game_over(self):
         if self.missed is 5:
-            print("Sorry, you have run out of guesses. Better luck next time!")
+            print("\nUh oh! You have run out of guesses. Better luck next time!")
         else:
-            print("Congratulations! You have guessed all of the letters in the phrase!")
+            print("\nCongratulations! You have guessed all of the letters in the phrase!")
+
+    def play_again(self):
+        attempts = 0
+
+        while attempts < 3:
+            try:
+                play_again = input("\nWould you like to play again? (Y/N): ")
+
+                if play_again.lower() == "y":
+                    game = Game()
+                    game.start()
+                elif play_again.lower() == "n":
+                    print("\nThanks for playing!")
+                elif attempts == 2:
+                    raise ValueError("Invalid input limit exceeded.")
+                else:
+                    raise ValueError("Invalid input. Please enter Y or N.")
+            except ValueError as err:
+                attempts += 1
+                print("{}".format(err))
