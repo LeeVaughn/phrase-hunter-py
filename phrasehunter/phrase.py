@@ -1,5 +1,12 @@
-# will contain the Phrase class and manage individual phrases
 class Phrase:
+    """
+    initializes instance attribute and contains methods to display phrase and check guesses
+
+    initializes phrase attribute
+    display method prints the phrase
+    check_guess method returns True if phrase contains guess or False if it doesn't
+    check_complete method returns True or False based on if all letters in the phrase have been guessed
+    """
     def __init__(self, phrase):
         self.phrase = phrase.lower()
 
@@ -23,9 +30,3 @@ class Phrase:
             if letter not in guesses:
                 return False
         return True
-
-
-#* original comments below
-# Create your Phrase class logic here.
-
-# Phrase class will store attributes of phrase and methods to display phrase
