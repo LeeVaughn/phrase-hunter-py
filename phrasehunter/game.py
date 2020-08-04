@@ -3,24 +3,17 @@ import random
 
 
 class Game:
-    """
-    initializes instance attributes and contains methods for gameplay
+    """Initializes instance attributes and contains methods for gameplay."""
 
-    initializes the instance attributes
-    start method calls welcome method and continues gameplay until phrase is guessed or player is out of tries
-    welcome method prints welcome message
-    create_phrases method returns five Phrase objects
-    get_random_phrase method returns a random Phrase object
-    get_guess method prompts player to guess a letter
-    game_over method prints a win or loss message based on number of misses
-    """
     def __init__(self):
+        """Initializes the instance attributes."""
         self.missed = 0
         self.phrases = self.create_phrases()
         self.active_phrase = self.get_random_phrase()
         self.guesses = " "
 
     def start(self):
+        """Calls welcome method and continues gameplay until phrase is guessed or player is out of tries."""
         self.welcome()
 
         while self.missed < 5 and self.active_phrase.check_complete(self.guesses) is False:
@@ -33,6 +26,7 @@ class Game:
 
             user_guess = self.get_guess()
 
+            # validates player's guess and returns exception if it is not a single letter
             try:
                 if len(user_guess) is 1 and user_guess.isalpha():
                     self.guesses = self.guesses + user_guess
@@ -74,6 +68,7 @@ class Game:
         return random.choice(self.phrases)
 
     def get_guess(self):
+        """Prompts player for guess and returns it."""
         current_guess = str(input("Guess a letter: "))
 
         return current_guess
@@ -85,6 +80,7 @@ class Game:
             print("\nCongratulations! You have guessed all of the letters in the phrase!")
 
     def play_again(self):
+        """Gives the player the option to play again, ends game after three invalid input."""
         attempts = 0
 
         while attempts < 3:
