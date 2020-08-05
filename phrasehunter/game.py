@@ -43,6 +43,7 @@ class Game:
         self.play_again()
 
     def welcome(self):
+        """Prints welcome message."""
         print("""
         =======================================
 
@@ -56,6 +57,7 @@ class Game:
         """)
     
     def create_phrases(self):
+        """Creates a list of Phrase objects"""
         return [
             Phrase("My precious"),
             Phrase("All righty then"),
@@ -65,22 +67,24 @@ class Game:
             ]
 
     def get_random_phrase(self):
+        """returns a random phrase"""
         return random.choice(self.phrases)
 
     def get_guess(self):
-        """Prompts player for guess and returns it."""
+        """Prompts player for guess and returns it as lower case."""
         current_guess = str(input("Guess a letter: "))
 
-        return current_guess
+        return current_guess.lower()
 
     def game_over(self):
+        """Prints a win or loss message based on the number of misses."""
         if self.missed is 5:
             print("\nUh oh! You have run out of guesses. Better luck next time!")
         else:
             print("\nCongratulations! You have guessed all of the letters in the phrase!")
 
     def play_again(self):
-        """Gives the player the option to play again, ends game after three invalid input."""
+        """Gives the player the option to play again, ends game after three invalid inputs."""
         attempts = 0
 
         while attempts < 3:
@@ -92,8 +96,10 @@ class Game:
                     game.start()
                 elif play_again.lower() == "n":
                     print("\nThanks for playing!")
+                    break
                 elif attempts == 2:
                     raise ValueError("Invalid input limit exceeded.")
+                    break
                 else:
                     raise ValueError("Invalid input. Please enter Y or N.")
             except ValueError as err:
