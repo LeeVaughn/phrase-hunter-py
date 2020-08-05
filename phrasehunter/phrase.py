@@ -15,7 +15,7 @@ class Phrase:
 
     def check_guess(self, guess):
         """Returns True if phrase contains guess or False if it doesn't."""
-        if guess.lower() in self.phrase:
+        if guess in self.phrase:
             print("Success!")
             return True
         else:
