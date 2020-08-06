@@ -94,6 +94,7 @@ class Game:
                 if play_again.lower() == "y":
                     game = Game()
                     game.start()
+                    break
                 elif play_again.lower() == "n":
                     print("\nThanks for playing!")
                     break
